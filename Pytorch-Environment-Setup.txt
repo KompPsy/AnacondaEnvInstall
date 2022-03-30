@@ -1,0 +1,21 @@
+#install Juypter Notebook
+conda install -y jupyter
+#conda create --name <Environment Name> python=<Version of Python> -y
+#Create pytorch environment on Conda
+conda create --name pytorch1.10 python=3.8
+"
+#activates environment
+conda activate torch1.9
+
+#installs nb_conda and pytorch packages
+conda install -y  nb_conda
+#FOR GPU
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+#FOR CPU
+#conda install pytorch torchvision torchaudio cpuonly -c pytorch
+
+#Registers Torch for juypter
+#python -m ipykernel install --user --name <Environment Name> --display-name "<Name of Environment Display as a option in Jupyter"
+python -m ipykernel install --user --name torchGPU --display-name "Python 3.8 (torchGPU)"
+read = Read-Host "Press Enter to exit."
+conda deactivate

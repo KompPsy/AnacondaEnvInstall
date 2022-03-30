@@ -1,0 +1,20 @@
+#Create Tensorflow environment on Conda
+#conda create --name <Environment Name> python=<Version of Python> -y
+conda create --name tf python=3.7 -y
+conda install -y jupyter
+#activates enviroment
+conda activate tensorflow
+#installs nb_conda and tensorflow packages
+conda install -y  nb_conda 
+# For GPU's
+conda install -c anaconda tensorflow-gpu
+
+#For CPU's Only
+conda install -c anaconda tensorflow
+
+#Registers Tensorflow for juypter
+#python -m ipykernel install --user --name <Environment Name> --display-name "<Name of Environment Display as a option in Jupyter"
+python -m ipykernel install --user --name tf --display-name "Python 3.7 (tf)"
+
+#Conda Environement Deactivate
+conda deactivate
