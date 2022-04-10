@@ -17,5 +17,4 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 #Registers Torch for juypter
 #python -m ipykernel install --user --name <Environment Name> --display-name "<Name of Environment Display as a option in Jupyter"
 python -m ipykernel install --user --name torchGPU --display-name "Python 3.8 (torchGPU)"
-read = Read-Host "Press Enter to exit."
 conda deactivate
